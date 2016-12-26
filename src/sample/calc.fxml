@@ -67,17 +67,17 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnDiv" layoutX="184.0" layoutY="225.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="/">
+      <Button fx:id="btnDiv" layoutX="184.0" layoutY="225.0" mnemonicParsing="false" onAction="#ClickDiv" prefHeight="50.0" prefWidth="50.0" text="/">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnMul" layoutX="184.0" layoutY="175.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="*">
+      <Button fx:id="btnMul" layoutX="184.0" layoutY="175.0" mnemonicParsing="false" onAction="#ClickMul" prefHeight="50.0" prefWidth="50.0" text="*">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnDif" layoutX="184.0" layoutY="125.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="-">
+      <Button fx:id="btnDif" layoutX="184.0" layoutY="125.0" mnemonicParsing="false" onAction="#ClickDif" prefHeight="50.0" prefWidth="50.0" text="-">
          <font>
             <Font size="18.0" />
          </font>
@@ -87,17 +87,17 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnClear" layoutX="242.0" layoutY="73.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="C">
+      <Button fx:id="btnClear" layoutX="242.0" layoutY="73.0" mnemonicParsing="false" onAction="#ClickClear" prefHeight="50.0" prefWidth="50.0" text="C">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnEquals" layoutX="242.0" layoutY="178.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="50.0" text="=">
+      <Button fx:id="btnEquals" layoutX="242.0" layoutY="178.0" mnemonicParsing="false" onAction="#ClickEquals" prefHeight="97.0" prefWidth="50.0" text="=">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnDelete" layoutX="242.0" layoutY="125.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="&lt;-">
+      <Button fx:id="btnDelete" layoutX="242.0" layoutY="125.0" mnemonicParsing="false" onAction="#ClickDelete" prefHeight="50.0" prefWidth="50.0" text="&lt;-">
          <font>
             <Font size="18.0" />
          </font>

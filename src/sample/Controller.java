@@ -13,6 +13,7 @@ public class Controller {
     double opr1 = 0;
     double opr2 = 0;
     boolean first_opr = true;
+    String sign = "";
 
     @FXML
     private Button btnNum1;
@@ -147,14 +148,82 @@ public class Controller {
 
     @FXML
     public void ClickSum() {
+        sign = "+";
+        Operation();
+    }
+
+    @FXML
+    public void ClickDif() {
+        sign = "-";
+        Operation();
+    }
+
+    @FXML
+    public void ClickMul() {
+        sign = "*";
+        Operation();
+    }
+
+    @FXML
+    public void ClickDiv() {
+        sign = "/";
+        Operation();
+    }
+
+    @FXML
+    public void ClickClear() {
+        tfRes.setText("");
+        first_opr = true;
+        opr1 = 0;
+        opr2 = 0;
+    }
+
+    public void Operation() {
+        if (tfRes.getText().equals("")) return;
+
         if (first_opr) {
             opr1 = Double.parseDouble(tfRes.getText());
             tfRes.setText("");
         } else {
             opr2 = Double.parseDouble(tfRes.getText());
-            tfRes.setText(""+(opr1+opr2));
+            switch (sign) {
+                case "+":
+                    tfRes.setText("" + (opr1 + opr2));
+                    break;
+                case "-":
+                    tfRes.setText("" + (opr1 - opr2));
+                    break;
+                case "*":
+                    tfRes.setText("" + (opr1 * opr2));
+                    break;
+                case "/":
+                    tfRes.setText("" + (opr1 / opr2));
+                    break;
+            }
+
         }
 
         first_opr = !first_opr;
     }
+
+    @FXML
+    public void ClickDelete() {
+//        String temp = tfRes.getText();
+//        temp.substring(0, (temp.length()-2));
+//        tfRes.setText(temp);
+        if (tfRes.getText().length() == 0) return;
+
+        tfRes.setText(
+                tfRes.getText().substring(
+                        0, (tfRes.getText().length() - 1)
+                )
+        );
+    }
+
+    @FXML
+    public void ClickEquals() {
+        if (sign.equals("")) return;
+        Operation();
+    }
 }
+
